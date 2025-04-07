@@ -19,7 +19,7 @@ st.title("Research Code Assistant")
 # 🔀 Local mode toggle
 st.markdown("Supports code translation, explanation, and safe data analysis across common research file formats.")
 
-api_key = "sk-ae9d818888f54ff5b9770cbf04ea52c7"  # Replace with your DeepSeek API key
+api_key = os.getenv("DEEPSEEK_API_KEY")  # Replace with your DeepSeek API key
 url = "https://api.deepseek.com/v1/chat/completions"
 headers = {
     "Authorization": f"Bearer {api_key}",
